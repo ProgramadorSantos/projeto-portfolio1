@@ -1,0 +1,125 @@
+@charset "UTF8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family:'fontenova';
+    src: url('duality.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Lora:wght@600&display=swap');
+
+body {
+    background-color: #3d17174f;
+}
+header {
+    background-image: linear-gradient(to bottom, #BCE101, #CC0202);
+    min-height: 350px;
+}
+img {
+    position: relative;
+}
+header > h1 {
+    font-family: 'fontenova';
+    text-align:center;
+    text-shadow: 1px 1px 5px black;
+}
+header > p {
+    font-family: 'fontenova', cursive;
+
+    text-align: center;
+    margin-bottom: 8px;
+}
+nav {
+    min-height: 40px;
+    background-image: linear-gradient(to top,#9E0101, #CC0202);
+    
+    
+    
+}
+nav > a {
+    margin: 4px;
+    bottom: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-style: italic;
+}
+nav a:hover{
+    background-color: #BCE101;
+    margin: 5px;
+    border-radius: 4px;
+    transition: 1s;
+    padding: 5px;
+}
+main {
+    font-size: 1.2em;
+    font-family: 'fontenova';
+    margin: auto;
+    background-color: white;
+    max-width: 85%;
+    text-indent: 30px;
+    box-shadow: 1px 0px 23px black;
+    border-radius: 0px 0px 8px 8px;
+
+}
+main h1 {
+    text-align: center;
+}
+main h2 {
+    text-align: center;
+    margin: 10px;
+}
+main  p {
+    padding: 3px;
+    margin: 10px;
+}
+hr {
+    margin: 10px;
+}
+img {
+    margin: 20px;
+
+}
+.aside1{
+    background-color: #3d17174f;
+    text-decoration: none;
+    list-style-position: inside;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 4px 7px 11px 0px black;
+    
+}
+.aside2 {
+    background-color: #3d17174f;
+    text-decoration: none;
+    list-style-position: inside;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 4px 7px 11px 0px black;
+}
+aside ul{
+    list-style-position: inside;
+    list-style-type: '📜\00a0\00a0';
+}
+div.imagemhtml {
+    text-align: center;
+}
+div.imagemcss {
+    text-align: center;
+}
+article {
+    padding: 30px;
+}
+footer {
+    min-height: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(245, 208, 129, 0.644);
+    text-align: center;
+    font-family: 'fontenova';
+    margin-top: 15px;
+}

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="pt-br" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Introdução à exibição e alteração do CSS - Microsoft Edge Development" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://learn.microsoft.com/pt-br/microsoft-edge/devtools-guide-chromium/css/" />
+			<meta property="og:description" content="Saiba como usar o Microsoft Edge DevTools para exibir e alterar o CSS de uma página." />
+
+	<meta property="og:image" content="https://learn.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+
+	<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="author" content="MSEdgeTeam" />
+<meta name="breadcrumb_path" content="/microsoft-edge/breadcrumbs/toc.json" />
+<meta name="depot_name" content="MSDN.edge-developer" />
+<meta name="description" content="Saiba como usar o Microsoft Edge DevTools para exibir e alterar o CSS de uma página." />
+<meta name="document_id" content="c229daf5-92cb-dd84-1d48-be8672a6dae5" />
+<meta name="document_version_independent_id" content="7f9a1c80-26b8-b222-3842-c1dfb5f11e1d" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/edge-developer/blob/46818b42fcfebd37a526e372b570300070ca3e1d/microsoft-edge/devtools-guide-chromium/css/index.md" />
+<meta name="loc_file_id" content="Github-79839017.live.MSDN.edge-developer.devtools-guide-chromium/css/index.md" />
+<meta name="loc_source_id" content="Github-79839017#live" />
+<meta name="loc_version" content="2023-01-14T01:08:32.0565204Z" />
+<meta name="locale" content="pt-br" />
+<meta name="ms.author" content="msedgedevrel" />
+<meta name="ms.contentlocale" content="pt-br" />
+<meta name="ms.date" content="11/16/2022" />
+<meta name="ms.prod" content="microsoft-edge" />
+<meta name="ms.technology" content="devtools" />
+<meta name="ms.topic" content="conceptual" />
+<meta name="ms.translationtype" content="MT" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/edge-developer/blob/live/microsoft-edge/devtools-guide-chromium/css/index.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="schema" content="Conceptual" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="../../toc.json" />
+<meta name="uhfHeaderId" content="MSDocsHeader-MSEdge" />
+<meta name="updated_at" content="2023-01-15 01:48 AM" />
+<meta name="word_count" content="1127" />
+
+
+	<meta name="persistent_id" content="128fbbf1-f7cd-ae4a-cd65-b6c9d8b6091a" />
+	
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/5287f575-02f0-405f-92b7-800456526b0c" data-source="generated" />
+
+	
+
+	<meta name="scope" content="Microsoft Edge" />
+	<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/edge-developer/blob/main/microsoft-edge/devtools-guide-chromium/css/index.md" />
+<link href="https://learn.microsoft.com/pt-br/microsoft-edge/devtools-guide-chromium/css/" rel="canonical">
+	<title>Introdução à exibição e alteração do CSS - Microsoft Edge Development | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/pt-br/_themes/styles/b127f60f.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'pt-br',
+			contentDir: 'ltr',
+			userLocale: 'pt-br',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			extendBreadcrumb: false,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "MSEdgeTeam", url: "https://github.com/MSEdgeTeam" },
+						{ name: "mikehoffms", url: "https://github.com/mikehoffms" },
+						{ name: "dan-wesley", url: "https://github.com/dan-wesley" },
+						{ name: "captainbrosset", url: "https://github.com/captainbrosset" },
+						{ name: "vchapel", url: "https://github.com/vchapel" },
+						{ name: "jm-trd-ms", url: "https://github.com/jm-trd-ms" },
+						{ name: "zoherghadyali", url: "https://github.com/zoherghadyali" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/pt-br/_themes/global/67a45209.deprecation.js"></script>
+		<script src="/_themes/docs.theme/master/pt-br/_themes/scripts/c1ccd65.index-docs.js"></script>
+</head>
+
+<body lang="pt-br" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Avançar para o conteúdo principal</a>
+
+		<div hidden id="cookie-consent-holder"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">Não há mais suporte para esse navegador.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Atualize o Microsoft Edge para aproveitar os recursos, o suporte técnico e as atualizações de segurança mais recentes.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Baixar o Microsoft Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+Mais informações sobre o Internet Explorer e o Microsoft Edge					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar border-top is-hidden-mobile"></div>
+</header>		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Sumário						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Sair do modo de foco</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-fixed display-flex flex-direction-column" role="navigation" aria-label="Primário"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" role="main" data-bi-name="content" lang="pt-br" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm" aria-label="Todas as trilhas">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+									<bread-crumbs id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop" id="page-breadcrumbs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Ler em inglês" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Ler em inglês</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Adicionar à coleção">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Salvar</span>
+											</button>
+										
+
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="Mais ações">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														aria-label="Sumário"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+														<span class="contents-expand-title">Sumário</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Ler em inglês" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Ler em inglês</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Adicionar à coleção"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Salvar</span>
+													</button>
+
+
+													<button
+														class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus"
+														title="Imprimir"
+														type="button"
+														aria-label="Imprimir"
+														data-bi-name="print"
+														data-page-action-item="overflow-all"
+														data-popover-close
+														data-print-page
+														data-check-hidden="true"
+														hidden>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>Imprimir</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none display-none-tablet border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div class="">
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" aria-label="Sumário" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+									<span class="contents-expand-title">Sumário</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="get-started-viewing-and-changing-css">Introdução à exibição e alteração do CSS</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="pt-br" dir="ltr">
+													<li>
+Artigo													</li>
+													<li class="visibility-hidden-visual-diff">
+														<time class="is-invisible" data-article-date aria-label="Data de revisão do artigo" datetime="2023-01-15T01:48:00Z" data-article-date-source="git">01/15/2023</time>
+													</li>
+															<li class="readingTime">5 minutos para o fim da leitura</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="Exibir todos os colaboradores" class="contributors-button link-button" data-bi-name="contributors" title="Exibir todos os colaboradores">
+																	7 colaboradores
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived>
+	<button
+		id="user-feedback-button"
+		data-test-id="conceptual-feedback-button"
+		class="button button-sm button-clear button-primary"
+		type="button"
+		data-bi-name="user-feedback-button"
+		data-user-feedback-button
+	>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Comentários</span>
+	</button>
+</div>
+									</div>
+
+										<nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm" data-bi-name="intopic toc" role="navigation" aria-label="Neste artigo">
+											<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">Neste artigo</h2>
+										</nav>
+
+								<!-- <content> -->
+									<!-- Copyright Kayce Basques
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.  -->
+<p>Siga as seções de tutorial interativas neste artigo para aprender as noções básicas de como usar o DevTools para exibir e alterar o CSS para uma página.</p>
+<!-- ====================================================================== -->
+<h2 id="view-the-css-for-an-element">Exibir o CSS para um elemento</h2>
+<ol>
+<li><p>Abra a página de demonstração <a href="https://microsoftedge.github.io/Demos/devtools-css-get-started/" data-linktype="external">de exemplos do CSS</a> em uma nova janela ou guia. Para abrir os exemplos, clique com o botão direito do mouse no link ou pressione e segure <code>Ctrl</code> (para Windows, Linux) ou <code>Command</code> (para macOS) e clique no link.</p>
+<!-- You can view the source files for the CSS Examples demo page at the [MicrosoftEdge/Demos > devtools-css-get-started](https://github.com/MicrosoftEdge/Demos/tree/main/devtools-css-get-started) repo folder. -->
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Inspect Me!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+<p>No painel <strong>Árvore do DOM</strong> sob a <strong>ferramenta Elementos</strong>, o <code>Inspect Me!</code> elemento é realçado.</p>
+<p><img src="../media/css-elements-inspect-me.msft.png" alt="O elemento inspecionado é realçado na Árvore DOM" data-linktype="relative-path"/></p>
+</li>
+<li><p><code>Inspect Me!</code> No elemento, localize o valor do atributo e copie-o<code>data-message</code>.</p>
+</li>
+<li><p>Na exibição da página, insira o <code>data-message</code> valor copiado na caixa <strong>Valor de mensagem de dados:</strong> texto.</p>
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Inspect Me!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>Em DevTools, na ferramenta <strong>Elementos</strong> , selecione o painel <strong>Estilos</strong> .  O <code>Inspect Me!</code> elemento é realçado no painel Estilos.</p>
+</li>
+<li><p><code>Inspect Me!</code> No elemento, localize a regra de <code>aloha</code> classe.  Essa regra é exibida porque está sendo aplicada ao <code>Inspect Me!</code> elemento.</p>
+</li>
+<li><p><code>aloha</code> Na classe, localize o valor do estilo e copie-o<code>padding</code>.</p>
+<p><img src="../media/css-elements-inspect-me-styles.msft.png" alt="A classe CSS aplicada ao elemento inspecionado é realçada no painel Estilos" data-linktype="relative-path"/></p>
+</li>
+<li><p>Na exibição da página, cole o <code>padding</code> valor na caixa <strong>Valor do preenchimento:</strong> texto.</p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<h2 id="add-a-css-declaration-to-an-element">Adicionar uma declaração CSS a um elemento</h2>
+<p>Use o painel <strong>Estilos</strong> quando quiser alterar ou adicionar declarações CSS a um elemento.</p>
+<ol>
+<li><p>Primeiro, recomendamos fazer a <a href="#view-the-css-for-an-element" data-linktype="self-bookmark">exibição anterior do CSS para um</a> tutorial de elemento.</p>
+</li>
+<li><p>Abra a página de demonstração <a href="https://microsoftedge.github.io/Demos/devtools-css-get-started/" data-linktype="external">de exemplos do CSS</a> em uma nova janela ou guia.</p>
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Add A Background Color To Me!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>Clique <code>element.style</code> perto da parte superior do painel <strong>Estilos</strong> .</p>
+</li>
+<li><p>Digite <code>background-color</code> ou selecione-o na lista suspensa e pressione <code>Enter</code>.</p>
+</li>
+<li><p>Digite <code>honeydew</code> ou selecione-o na lista suspensa de cores e pressione <code>Enter</code>.  Depois de escolher uma cor, uma declaração de estilo embutido que é aplicada ao elemento é exibida na <strong>Árvore do DOM</strong>,</p>
+<p>A <code>background-color:honeydew</code> declaração é aplicada ao elemento usando a <code>element.style</code> seção do painel <strong>Estilos</strong> :</p>
+<p><img src="../media/css-elements-add-background-color-to-me-styles-p.msft.png" alt="Adicionar uma declaração CSS ao elemento usando o painel Estilos" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<h2 id="add-a-css-class-to-an-element">Adicionar uma classe CSS a um elemento</h2>
+<p>Para exibir a aparência de um elemento quando uma classe CSS é aplicada ou removida de um elemento, consulte o painel <strong>Estilos</strong> .</p>
+<ol>
+<li><p>Primeiro, recomendamos fazer a <a href="#view-the-css-for-an-element" data-linktype="self-bookmark">exibição anterior do CSS para um</a> tutorial de elemento.</p>
+</li>
+<li><p>Abra a página de demonstração <a href="https://microsoftedge.github.io/Demos/devtools-css-get-started/" data-linktype="external">de exemplos do CSS</a> em uma nova janela ou guia.</p>
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Add A Class To Me!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>Clique <strong>em .cls</strong>.  DevTools mostra uma caixa de texto em que você pode adicionar classes CSS ao elemento de página que você está inspecionando.</p>
+</li>
+<li><p>Digite <code>color_me</code> na caixa <strong>de texto Adicionar nova classe</strong> e pressione <code>Enter</code>.  Uma caixa de seleção é exibida abaixo da caixa <strong>de texto Adicionar nova classe</strong> , na qual você pode alternar e desativar a classe.  Se o <code>Add A Class To Me!</code> elemento tiver outras classes aplicadas a ele, você também poderá alternar cada classe daqui.</p>
+<p>A <code>color_me</code> classe é aplicada ao elemento usando a seção <strong>.cls</strong> do painel <strong>Estilos</strong> :</p>
+<p><img src="../media/css-elements-add-a-class-to-me-styles-cls.msft.png" alt="Aplicar a classe color_me ao elemento" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<h2 id="add-a-pseudostate-to-a-class">Adicionar um pseudoestado a uma classe</h2>
+<p>Use o painel <strong>Estilos</strong> para aplicar permanentemente um pseudoestado CSS a um elemento.  O DevTools dá <code>:active</code>suporte a , <code>:focus</code>, <code>:hover</code>, e <code>:visited</code>.</p>
+<ol>
+<li><p>Primeiro, recomendamos fazer a <a href="#view-the-css-for-an-element" data-linktype="self-bookmark">exibição anterior do CSS para um</a> tutorial de elemento.</p>
+</li>
+<li><p>Abra a página de demonstração <a href="https://microsoftedge.github.io/Demos/devtools-css-get-started/" data-linktype="external">de exemplos do CSS</a> em uma nova janela ou guia.</p>
+</li>
+<li><p>Passe o <code>Hover Over Me!</code> mouse no texto.  A cor do plano de fundo muda.</p>
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Hover Over Me!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>No painel <strong>Estilos</strong> , clique em <strong>:hov</strong>.</p>
+</li>
+<li><p>Selecione a caixa de seleção <strong>:hover</strong> .  A cor do plano de fundo muda como na primeira etapa, mesmo que você não esteja realmente pairando sobre o elemento.</p>
+<p>A próxima captura de tela mostra o resultado da agregação do <code>:hover</code> pseudoestado em um elemento.</p>
+<p><img src="../media/css-elements-hover-over-me-styles-hov-hover.msft.png" alt="Agrupando o pseudoestado de hover em um elemento" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<h2 id="change-the-dimensions-of-an-element">Alterar as dimensões de um elemento</h2>
+<p>Use o diagrama interativo <strong>Box Model</strong> no painel <strong>Estilos</strong> para alterar a largura, altura, preenchimento, margem ou comprimento da borda de um elemento.</p>
+<ol>
+<li><p>Primeiro, recomendamos fazer a <a href="#view-the-css-for-an-element" data-linktype="self-bookmark">exibição anterior do CSS para um</a> tutorial de elemento.</p>
+</li>
+<li><p>Abra a página de demonstração <a href="https://microsoftedge.github.io/Demos/devtools-css-get-started/" data-linktype="external">de exemplos do CSS</a> em uma nova janela ou guia.</p>
+</li>
+<li><p>Clique com o botão direito do mouse no <code>Change My Margin!</code> texto e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>No diagrama <strong>Modelo de Caixa</strong> no painel <strong>Estilos</strong> , passe o mouse no <strong>preenchimento</strong>.  O preenchimento do elemento é realçado no modo de exibição.</p>
+<p>Dependendo do tamanho da janela DevTools, talvez seja necessário rolar até a parte inferior do painel <strong>Estilos</strong> para exibir o <strong>Modelo de Caixa</strong>.</p>
+</li>
+<li><p>Clique duas vezes na margem esquerda no <strong>Modelo box</strong>, que atualmente tem um valor de <code>-</code>. O <code>-</code> significa que o elemento não tem um valor para <code>margin-left</code>.</p>
+</li>
+<li><p>Digite <code>100px</code> e pressione <code>Enter</code>.  O <strong>Modelo box</strong> é padrão para pixels, mas também aceita outros valores, como <code>25%</code>, ou <code>10vw</code>.</p>
+<p>Pairando sobre o preenchimento do elemento:</p>
+<p><img src="../media/css-elements-change-my-margin-styles-padding.msft.png" alt="Pairando sobre o preenchimento do elemento" data-linktype="relative-path"/></p>
+<p>Alterando a margem esquerda do elemento:</p>
+<p><img src="../media/css-elements-change-my-margin-styles-margin-edit.msft.png" alt="Alterando a margem esquerda do elemento" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<h2 id="debugging-media-queries">Depurando consultas de mídia</h2>
+<p><a href="https://developer.mozilla.org/docs/Web/CSS/Media_Queries/Using_media_queries" data-linktype="external">Consultas de mídia</a> são uma maneira de fazer seu site reagir às alterações nas configurações de cada usuário. O caso de uso mais comum é dar à sua página um layout CSS diferente, dependendo das dimensões do modo de exibição.</p>
+<p>O uso de layouts separados permite um layout de uma coluna para dispositivos móveis e layouts de várias colunas quando há mais imóveis de tela disponíveis.</p>
+<p>Use as etapas a seguir para depurar ou testar as Consultas de Mídia que você definiu em seu CSS.</p>
+<ol>
+<li><p>Para abrir o DevTools, clique com o botão direito do mouse em uma página da Web e selecione <strong>Inspecionar</strong>.</p>
+</li>
+<li><p>Clique no botão <strong>Emulação de dispositivo de alternância</strong> (<img src="../media/device-emulation-icon-light-theme.png" alt="ícone de emulação de dispositivo" data-linktype="relative-path"/>).  Ou, quando DevTools tiver foco, pressione <code>Ctrl</code>+<code>M</code>+<code>Shift</code>(Windows, Linux) ou <code>Cmd</code>+<code>Shift</code>+<code>M</code> (macOS).</p>
+<!-- todo: update to show new tooltip: -->
+<p><img src="../media/css-elements-media-queries-open-device-toolbar.msft.png" alt="Abrir a barra de ferramentas do dispositivo" data-linktype="relative-path"/></p>
+</li>
+<li><p>Com a barra de ferramentas do dispositivo aberta, clique no <code>...</code> menu na parte superior direita e selecione <strong>Mostrar consultas de mídia</strong>:</p>
+<p><img src="../media/css-elements-media-queries-showing-mq.msft.png" alt="Mostrando consultas de mídia na barra de ferramentas do dispositivo" data-linktype="relative-path"/></p>
+<p>As barras coloridas acima da página da Web representam as diferentes consultas de mídia.</p>
+</li>
+<li><p>Passe o mouse sobre os limites nas barras para exibir os valores das diferentes consultas de mídia.  Clique em cada valor de consulta de mídia para redimensionar a página da Web para corresponder.</p>
+<p><img src="../media/css-elements-media-queries-select-bar.msft.png" alt="Selecionando uma consulta de mídia na barra de visualização" data-linktype="relative-path"/></p>
+</li>
+<li><p>Para depurar consultas de mídia e abrir o arquivo CSS no editor, clique com o botão direito do <code>Sources</code> mouse em um segmento de barra e selecione <strong>Revelar no código-fonte</strong>:</p>
+<p><img src="../media/css-elements-media-queries-reveal-in-sources.msft.png" alt="Revelar consultas de mídia no Editor de Fontes" data-linktype="relative-path"/></p>
+</li>
+</ol>
+<!-- ====================================================================== -->
+<div class="NOTE">
+<p>Observação</p>
+<p>Partes desta página são modificações baseadas no trabalho criado e <a href="https://developers.google.com/terms/site-policies" data-linktype="external">compartilhado pelo Google</a> e usadas de acordo com os termos descritos na <a href="https://creativecommons.org/licenses/by/4.0" data-linktype="external">Licença Pública Creative Commons Atribuição 4.0 Internacional</a>.
+A página original é encontrada <a href="https://developer.chrome.com/docs/devtools/css/" data-linktype="external">aqui</a> e é de autoria de <a href="https://developers.google.com/web/resources/contributors#kayce-basques" data-linktype="external">Kayce Basques</a> (Technical Writer, Chrome DevTools &amp; Lighthouse).</p>
+</div>
+<p><a href="https://creativecommons.org/licenses/by/4.0" data-linktype="external"><img src="../../media/cc-logo/88x31.png" alt="Licença Creative Commons" data-linktype="relative-path"/></a> Este trabalho é licenciado sob uma <a href="https://creativecommons.org/licenses/by/4.0" data-linktype="external">Licença Internacional de Atribuição do Creative Commons 4.0</a>.</p>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations" class="display-none-print"></section>
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<div
+								id="ms--additional-resources-mobile"
+								role="complementary"
+								aria-label="Recursos adicionais"
+								class="display-none-desktop"
+							>
+								<hr class="hr" hidden />
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>Recursos adicionais</h2>
+									<section id="right-rail-recommendations-mobile" data-bi-name="recommendations" hidden></section>
+								<section id="right-rail-learning-resources-mobile" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden></section>
+							</div>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Escuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Alto contraste					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="/pt-br/previous-versions/" data-bi-name="archivelink">Versões anteriores</a></li>
+				<li><a data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="/pt-br/contribute/" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidade</a></li>
+				<li><a data-mscc-ic="false" href="/pt-br/legal/termsofuse" data-bi-name="termsofuse">Termos de Uso</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas Comerciais</a></li>
+		<li>&copy; Microsoft 2023</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							id="ms--additional-resources"
+							class="right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Recursos adicionais"
+						>
+							<div id="affixed-right-container" class="margin-top-sm-tablet" data-bi-name="right-column">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md" hidden>Recursos adicionais</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-learning-resources" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" hidden></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Neste artigo">
+									<h3>Neste artigo</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Escuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Alto contraste					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="/pt-br/previous-versions/" data-bi-name="archivelink">Versões anteriores</a></li>
+				<li><a data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="/pt-br/contribute/" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidade</a></li>
+				<li><a data-mscc-ic="false" href="/pt-br/legal/termsofuse" data-bi-name="termsofuse">Termos de Uso</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas Comerciais</a></li>
+		<li>&copy; Microsoft 2023</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Painel de ação" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
